@@ -4,21 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ .Title }} | RealTLD</title>
+    <meta name="description" content="{{ .Params.meta_description }}">
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; padding: 2rem; max-width: 800px; margin: 0 auto; color: #333; }
-        h1 { color: #2563eb; }
-        h2, h3 { color: #1e40af; margin-top: 2rem; }
-        a { color: #2563eb; text-decoration: none; font-weight: bold; }
-        a:hover { text-decoration: underline; }
-        .back-link { display: inline-block; margin-bottom: 2rem; font-size: 0.9em; }
-        .article-content { margin-top: 2rem; }
+        :root {
+            --primary: #0f172a;
+            --accent: #2563eb;
+            --accent-hover: #1d4ed8;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text: #334155;
+            --text-light: #64748b;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', -apple-system, sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.8; }
+        
+        header { background-color: var(--primary); color: white; padding: 1.5rem 0; border-bottom: 4px solid var(--accent); }
+        .header-content { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.8rem; font-weight: 800; text-decoration: none; color: white; letter-spacing: -0.5px; }
+        .logo span { color: var(--accent); }
+        
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem; display: grid; grid-template-columns: 2.5fr 1fr; gap: 4rem; }
+        @media (max-width: 900px) { .container { grid-template-columns: 1fr; } }
+        
+        .article-header { margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 1px solid #e2e8f0; }
+        h1 { font-size: 2.5rem; color: var(--primary); line-height: 1.2; margin-bottom: 1rem; }
+        .meta { color: var(--text-light); font-size: 0.95rem; }
+        
+        .content h2 { font-size: 1.8rem; color: var(--primary); margin: 3rem 0 1rem 0; }
+        .content h3 { font-size: 1.4rem; color: var(--primary); margin: 2rem 0 1rem 0; }
+        .content p { margin-bottom: 1.5rem; font-size: 1.1rem; }
+        .content ul, .content ol { margin-bottom: 1.5rem; padding-left: 2rem; font-size: 1.1rem; }
+        .content li { margin-bottom: 0.5rem; }
+        .content a { color: var(--accent); text-decoration: none; font-weight: 600; border-bottom: 2px solid transparent; transition: border-color 0.2s; }
+        .content a:hover { border-bottom-color: var(--accent); }
+        
+        .content strong { color: var(--primary); font-weight: 700; }
+        .content hr { border: 0; height: 1px; background: #e2e8f0; margin: 3rem 0; }
+        
+        /* In-Article Affiliate Button */
+        .cta-button { display: block; text-align: center; background-color: #10b981; color: white !important; font-size: 1.2rem; font-weight: bold; padding: 1rem 2rem; border-radius: 8px; margin: 2rem 0; text-decoration: none !important; transition: background-color 0.2s; border: none !important; }
+        .cta-button:hover { background-color: #059669; }
+
+        /* Sidebar Ads */
+        .sidebar { display: flex; flex-direction: column; gap: 2rem; }
+        .ad-banner-sidebar { background-color: #e2e8f0; border: 2px dashed #cbd5e1; height: 600px; display: flex; align-items: center; justify-content: center; color: var(--text-light); font-weight: 600; border-radius: 8px; text-align: center; padding: 1rem; position: sticky; top: 2rem; }
+        
+        footer { background-color: var(--primary); color: white; text-align: center; padding: 3rem 2rem; margin-top: 4rem; }
     </style>
 </head>
 <body>
-    <a href="/" class="back-link">← Back to Home</a>
-    <h1>{{ .Title }}</h1>
-    <div class="article-content">
-        {{ .Content }}
+    <header>
+        <div class="header-content">
+            <a href="/" class="logo">Real<span>TLD</span></a>
+        </div>
+    </header>
+
+    <div class="container">
+        <main>
+            <article>
+                <div class="article-header">
+                    <h1>{{ .Title }}</h1>
+                    <div class="meta">By {{ .Params.author }} | Published on {{ .Date.Format "January 2, 2006" }}</div>
+                </div>
+                
+                <div class="content">
+                    {{ .Content | safeHTML }}
+                </div>
+            </article>
+        </main>
+
+        <aside class="sidebar">
+            <div class="ad-banner-sidebar">
+                [ High-Converting Sticky Sidebar Ad ]<br><br>As the user scrolls down reading the article, this ad stays on their screen, driving massive CTR.
+            </div>
+        </aside>
     </div>
+
+    <footer>
+        <p>&copy; 2026 RealTLD. All rights reserved.</p>
+    </footer>
 </body>
 </html>

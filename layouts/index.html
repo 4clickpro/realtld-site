@@ -3,28 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RealTLD - Real Estate Software Guide</title>
+    <title>RealTLD - The Software Advantage for Real Estate</title>
+    <meta name="description" content="Discover the best CRM, Lead Generation, and Document Management tools for top-producing real estate agents.">
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; padding: 2rem; max-width: 800px; margin: 0 auto; color: #333; }
-        h1 { color: #2563eb; }
-        .post-list { list-style: none; padding: 0; }
-        .post-list li { margin-bottom: 1rem; padding: 1rem; border: 1px solid #e5e7eb; border-radius: 8px; }
-        a { color: #2563eb; text-decoration: none; font-weight: bold; }
-        a:hover { text-decoration: underline; }
+        :root {
+            --primary: #0f172a;
+            --accent: #2563eb;
+            --accent-hover: #1d4ed8;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text: #334155;
+            --text-light: #64748b;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', -apple-system, sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.6; }
+        
+        /* Header */
+        header { background-color: var(--primary); color: white; padding: 1.5rem 0; border-bottom: 4px solid var(--accent); }
+        .header-content { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.8rem; font-weight: 800; text-decoration: none; color: white; letter-spacing: -0.5px; }
+        .logo span { color: var(--accent); }
+        
+        /* Hero Section */
+        .hero { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: white; padding: 5rem 2rem; text-align: center; }
+        .hero h1 { font-size: 3.5rem; font-weight: 800; margin-bottom: 1.5rem; line-height: 1.2; }
+        .hero p { font-size: 1.25rem; color: #94a3b8; max-width: 700px; margin: 0 auto 2.5rem auto; }
+        
+        /* Ad Banner Placeholder - Top */
+        .ad-banner-top { background-color: #e2e8f0; border: 2px dashed #cbd5e1; text-align: center; padding: 2rem; margin: 2rem auto; max-width: 970px; color: var(--text-light); font-weight: 600; border-radius: 8px; }
+        
+        /* Main Layout */
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem; display: grid; grid-template-columns: 2.5fr 1fr; gap: 3rem; }
+        @media (max-width: 900px) { .container { grid-template-columns: 1fr; } }
+        
+        /* Post Grid */
+        .post-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2rem; }
+        .post-card { background: var(--card-bg); border-radius: 12px; padding: 2rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03); transition: transform 0.2s, box-shadow 0.2s; border: 1px solid #e2e8f0; }
+        .post-card:hover { transform: translateY(-5px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
+        .post-card h3 { font-size: 1.25rem; color: var(--primary); margin-bottom: 1rem; line-height: 1.4; }
+        .post-card p { color: var(--text-light); font-size: 0.95rem; margin-bottom: 1.5rem; }
+        .read-more { display: inline-block; background-color: var(--accent); color: white; padding: 0.5rem 1.25rem; border-radius: 6px; text-decoration: none; font-weight: 600; transition: background-color 0.2s; }
+        .read-more:hover { background-color: var(--accent-hover); }
+        
+        /* Sidebar */
+        .sidebar { display: flex; flex-direction: column; gap: 2rem; }
+        .sidebar-widget { background: var(--card-bg); padding: 2rem; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; }
+        .sidebar-widget h4 { font-size: 1.1rem; color: var(--primary); margin-bottom: 1rem; border-bottom: 2px solid #e2e8f0; padding-bottom: 0.5rem; }
+        
+        /* Ad Banner Placeholder - Sidebar */
+        .ad-banner-sidebar { background-color: #e2e8f0; border: 2px dashed #cbd5e1; height: 600px; display: flex; align-items: center; justify-content: center; color: var(--text-light); font-weight: 600; border-radius: 8px; text-align: center; padding: 1rem; }
+        
+        /* Footer */
+        footer { background-color: var(--primary); color: white; text-align: center; padding: 3rem 2rem; margin-top: 4rem; }
     </style>
 </head>
 <body>
-    <h1>Welcome to RealTLD</h1>
-    <p>The ultimate guide to real estate software. We review the best CRMs, lead generation tools, and document management systems for top-producing agents.</p>
-    
-    <h2>Latest Reviews:</h2>
-    <ul class="post-list">
-        {{ range .Site.RegularPages }}
-        <li>
-            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-            <p>{{ .Description }}</p>
-        </li>
-        {{ end }}
-    </ul>
+    <header>
+        <div class="header-content">
+            <a href="/" class="logo">Real<span>TLD</span></a>
+        </div>
+    </header>
+
+    <div class="hero">
+        <h1>The Software Advantage for Real Estate</h1>
+        <p>Expert reviews of the best CRMs, lead generation tools, and document management systems for top-producing agents.</p>
+    </div>
+
+    <!-- 970x250 Ad Banner or Affiliate Banner -->
+    <div class="ad-banner-top">
+        [ Top Ad Banner Space - 970x250 ]<br><span style="font-size:0.8em; font-weight:normal;">Perfect for high-paying affiliate banners (e.g., KVCore, Follow Up Boss) or AdSense.</span>
+    </div>
+
+    <div class="container">
+        <main>
+            <div style="margin-bottom: 2rem;">
+                <h2 style="color: var(--primary); font-size: 2rem;">Latest Local Guides</h2>
+                <p style="color: var(--text-light);">Dominate your specific market with the right tech stack.</p>
+            </div>
+            
+            <div class="post-grid">
+                {{ range .Site.RegularPages }}
+                <div class="post-card">
+                    <h3><a href="{{ .RelPermalink }}" style="color: inherit; text-decoration: none;">{{ .Title }}</a></h3>
+                    <a href="{{ .RelPermalink }}" class="read-more">Read Guide →</a>
+                </div>
+                {{ end }}
+            </div>
+        </main>
+
+        <aside class="sidebar">
+            <!-- 300x600 Sidebar Ad -->
+            <div class="ad-banner-sidebar">
+                [ Sticky Sidebar Ad Space - 300x600 ]<br><br>Highly converting spot for direct real estate software affiliate links.
+            </div>
+            
+            <div class="sidebar-widget">
+                <h4>About RealTLD</h4>
+                <p style="color: var(--text-light); font-size: 0.95rem;">We analyze the tech stacks of top-producing brokerages across the country to help you close more deals.</p>
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 RealTLD. All rights reserved.</p>
+    </footer>
 </body>
 </html>
