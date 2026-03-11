@@ -1,10 +1,9 @@
----
-title: "Welcome to RealTLD"
-date: 2026-03-10
----
++++
+title = "RealTLD - The Software Advantage for Real Estate"
++++
+# Welcome to RealTLD
 
-# The Real Estate Software Hub
-Discover the best CRM, Lead Generation, and Document Management tools for top-producing real estate agents.
+The ultimate guide to real estate software.
 
-[Read our latest software reviews →](/posts/)
+[See our posts](/posts/)
 
