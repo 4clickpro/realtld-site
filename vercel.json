@@ -1,0 +1,9 @@
+{
+  "build": {
+    "command": "hugo --gc",
+    "outputDirectory": "public",
+    "env": {
+      "HUGO_VERSION": "0.122.0"
+    }
+  }
+}
