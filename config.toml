@@ -1,9 +1,0 @@
-baseURL = "https://www.realtld.com/"
-languageCode = "en-us"
-title = "RealTLD - The Software Advantage for Real Estate"
-theme = "ananke"
-disableKinds = ["RSS", "sitemap"]
-
-[params]
-  description = "The best software tools and guides for Real Estate Professionals."
-
