@@ -14,6 +14,7 @@
             --card-bg: #ffffff;
             --text: #334155;
             --text-light: #64748b;
+            --highlight: #10b981;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Inter', -apple-system, sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.6; }
@@ -29,8 +30,12 @@
         .hero h1 { font-size: 3.5rem; font-weight: 800; margin-bottom: 1.5rem; line-height: 1.2; }
         .hero p { font-size: 1.25rem; color: #94a3b8; max-width: 700px; margin: 0 auto 2.5rem auto; }
         
-        /* Ad Banner Placeholder - Top */
-        .ad-banner-top { background-color: #e2e8f0; border: 2px dashed #cbd5e1; text-align: center; padding: 2rem; margin: 2rem auto; max-width: 970px; color: var(--text-light); font-weight: 600; border-radius: 8px; }
+        /* Custom Top Banner */
+        .premium-banner-top { background: linear-gradient(90deg, #1e3a8a 0%, #2563eb 100%); max-width: 970px; margin: 2rem auto; border-radius: 12px; padding: 2.5rem; text-align: center; color: white; box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.3); border: 2px solid rgba(255,255,255,0.1); display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 1rem; }
+        .premium-banner-top h2 { font-size: 2rem; font-weight: 800; margin: 0; }
+        .premium-banner-top p { font-size: 1.1rem; color: #bfdbfe; max-width: 600px; margin: 0; }
+        .banner-btn { background-color: #10b981; color: white; padding: 1rem 2.5rem; border-radius: 50px; font-weight: bold; font-size: 1.2rem; text-decoration: none; text-transform: uppercase; letter-spacing: 1px; transition: transform 0.2s, background-color 0.2s; display: inline-block; margin-top: 1rem; }
+        .banner-btn:hover { background-color: #059669; transform: scale(1.05); }
         
         /* Main Layout */
         .container { max-width: 1200px; margin: 0 auto; padding: 2rem; display: grid; grid-template-columns: 2.5fr 1fr; gap: 3rem; }
@@ -47,11 +52,14 @@
         
         /* Sidebar */
         .sidebar { display: flex; flex-direction: column; gap: 2rem; }
-        .sidebar-widget { background: var(--card-bg); padding: 2rem; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; }
-        .sidebar-widget h4 { font-size: 1.1rem; color: var(--primary); margin-bottom: 1rem; border-bottom: 2px solid #e2e8f0; padding-bottom: 0.5rem; }
         
-        /* Ad Banner Placeholder - Sidebar */
-        .ad-banner-sidebar { background-color: #e2e8f0; border: 2px dashed #cbd5e1; height: 600px; display: flex; align-items: center; justify-content: center; color: var(--text-light); font-weight: 600; border-radius: 8px; text-align: center; padding: 1rem; }
+        /* Custom Sidebar Banner */
+        .premium-banner-sidebar { background: #0f172a; height: 600px; border-radius: 12px; padding: 2rem; text-align: center; color: white; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3); border: 1px solid #334155; display: flex; flex-direction: column; justify-content: center; align-items: center; position: sticky; top: 2rem; background-image: radial-gradient(circle at top right, #1e293b, transparent); }
+        .premium-banner-sidebar .badge { background-color: #ef4444; color: white; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.8rem; font-weight: bold; text-transform: uppercase; margin-bottom: 1rem; }
+        .premium-banner-sidebar h3 { font-size: 2.2rem; font-weight: 900; margin-bottom: 1rem; line-height: 1.1; color: white; }
+        .premium-banner-sidebar p { color: #94a3b8; font-size: 1rem; margin-bottom: 2rem; }
+        .premium-banner-sidebar .price { font-size: 2.5rem; font-weight: 900; color: #10b981; margin-bottom: 1.5rem; }
+        .premium-banner-sidebar .banner-btn { padding: 1rem 1.5rem; width: 100%; font-size: 1rem; }
         
         /* Footer */
         footer { background-color: var(--primary); color: white; text-align: center; padding: 3rem 2rem; margin-top: 4rem; }
@@ -69,9 +77,11 @@
         <p>Expert reviews of the best CRMs, lead generation tools, and document management systems for top-producing agents.</p>
     </div>
 
-    <!-- 970x250 Ad Banner or Affiliate Banner -->
-    <div class="ad-banner-top">
-        [ Top Ad Banner Space - 970x250 ]<br><span style="font-size:0.8em; font-weight:normal;">Perfect for high-paying affiliate banners (e.g., KVCore, Follow Up Boss) or AdSense.</span>
+    <!-- Top Banner (High Ticket Service) -->
+    <div class="premium-banner-top">
+        <h2>Automate Your Entire Brokerage</h2>
+        <p>We build custom, autonomous AI Agents that scrape leads, manage CRM data, and write emails for you 24/7.</p>
+        <a href="#" class="banner-btn">Hire the OpenClaw AI Team</a>
     </div>
 
     <div class="container">
@@ -92,14 +102,14 @@
         </main>
 
         <aside class="sidebar">
-            <!-- 300x600 Sidebar Ad -->
-            <div class="ad-banner-sidebar">
-                [ Sticky Sidebar Ad Space - 300x600 ]<br><br>Highly converting spot for direct real estate software affiliate links.
-            </div>
-            
-            <div class="sidebar-widget">
-                <h4>About RealTLD</h4>
-                <p style="color: var(--text-light); font-size: 0.95rem;">We analyze the tech stacks of top-producing brokerages across the country to help you close more deals.</p>
+            <!-- Sticky Sidebar Banner (1 Agent Setup) -->
+            <div class="premium-banner-sidebar">
+                <div class="badge">Limited Availability</div>
+                <h3>The Solo AI Agent</h3>
+                <p>Hire a custom-built, fully autonomous OpenClaw AI worker to run your real estate workflow 24/7.</p>
+                <div class="price">00</div>
+                <a href="#" class="banner-btn">Deploy Your Agent</a>
+                <p style="font-size: 0.8rem; margin-top: 1rem; color: #475569;">Includes 1hr integration consulting.</p>
             </div>
         </aside>
     </div>

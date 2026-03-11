@@ -41,13 +41,16 @@
         .content strong { color: var(--primary); font-weight: 700; }
         .content hr { border: 0; height: 1px; background: #e2e8f0; margin: 3rem 0; }
         
-        /* In-Article Affiliate Button */
-        .cta-button { display: block; text-align: center; background-color: #10b981; color: white !important; font-size: 1.2rem; font-weight: bold; padding: 1rem 2rem; border-radius: 8px; margin: 2rem 0; text-decoration: none !important; transition: background-color 0.2s; border: none !important; }
-        .cta-button:hover { background-color: #059669; }
-
-        /* Sidebar Ads */
         .sidebar { display: flex; flex-direction: column; gap: 2rem; }
-        .ad-banner-sidebar { background-color: #e2e8f0; border: 2px dashed #cbd5e1; height: 600px; display: flex; align-items: center; justify-content: center; color: var(--text-light); font-weight: 600; border-radius: 8px; text-align: center; padding: 1rem; position: sticky; top: 2rem; }
+        
+        /* Custom Sidebar Banner */
+        .premium-banner-sidebar { background: #0f172a; height: 600px; border-radius: 12px; padding: 2rem; text-align: center; color: white; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3); border: 1px solid #334155; display: flex; flex-direction: column; justify-content: center; align-items: center; position: sticky; top: 2rem; background-image: radial-gradient(circle at top right, #1e293b, transparent); }
+        .premium-banner-sidebar .badge { background-color: #ef4444; color: white; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.8rem; font-weight: bold; text-transform: uppercase; margin-bottom: 1rem; }
+        .premium-banner-sidebar h3 { font-size: 2.2rem; font-weight: 900; margin-bottom: 1rem; line-height: 1.1; color: white; }
+        .premium-banner-sidebar p { color: #94a3b8; font-size: 1rem; margin-bottom: 2rem; }
+        .premium-banner-sidebar .price { font-size: 2.5rem; font-weight: 900; color: #10b981; margin-bottom: 1.5rem; }
+        .premium-banner-sidebar .banner-btn { background-color: #10b981; color: white; padding: 1rem 1.5rem; border-radius: 50px; font-weight: bold; font-size: 1rem; text-decoration: none; text-transform: uppercase; letter-spacing: 1px; transition: transform 0.2s; width: 100%; }
+        .premium-banner-sidebar .banner-btn:hover { background-color: #059669; transform: scale(1.05); }
         
         footer { background-color: var(--primary); color: white; text-align: center; padding: 3rem 2rem; margin-top: 4rem; }
     </style>
@@ -74,8 +77,13 @@
         </main>
 
         <aside class="sidebar">
-            <div class="ad-banner-sidebar">
-                [ High-Converting Sticky Sidebar Ad ]<br><br>As the user scrolls down reading the article, this ad stays on their screen, driving massive CTR.
+            <div class="premium-banner-sidebar">
+                <div class="badge">Limited Availability</div>
+                <h3>The Solo AI Agent</h3>
+                <p>Hire a custom-built, fully autonomous OpenClaw AI worker to run your real estate workflow 24/7.</p>
+                <div class="price">00</div>
+                <a href="#" class="banner-btn">Deploy Your Agent</a>
+                <p style="font-size: 0.8rem; margin-top: 1rem; color: #475569;">Includes 1hr integration consulting.</p>
             </div>
         </aside>
     </div>
