@@ -1,9 +1,30 @@
-+++
-title = "RealTLD - The Software Advantage for Real Estate"
-+++
-# Welcome to RealTLD
-
-The ultimate guide to real estate software.
-
-[See our posts](/posts/)
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RealTLD - Real Estate Software Guide</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; padding: 2rem; max-width: 800px; margin: 0 auto; color: #333; }
+        h1 { color: #2563eb; }
+        .post-list { list-style: none; padding: 0; }
+        .post-list li { margin-bottom: 1rem; padding: 1rem; border: 1px solid #e5e7eb; border-radius: 8px; }
+        a { color: #2563eb; text-decoration: none; font-weight: bold; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <h1>Welcome to RealTLD</h1>
+    <p>The ultimate guide to real estate software. We review the best CRMs, lead generation tools, and document management systems for top-producing agents.</p>
+    
+    <h2>Latest Reviews:</h2>
+    <ul class="post-list">
+        {{ range .Site.RegularPages }}
+        <li>
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            <p>{{ .Description }}</p>
+        </li>
+        {{ end }}
+    </ul>
+</body>
+</html>
