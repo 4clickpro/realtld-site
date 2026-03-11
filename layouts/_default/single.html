@@ -43,14 +43,17 @@
         
         .sidebar { display: flex; flex-direction: column; gap: 2rem; }
         
-        /* Custom Sidebar Banner */
-        .premium-banner-sidebar { background: #0f172a; height: 600px; border-radius: 12px; padding: 2rem; text-align: center; color: white; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3); border: 1px solid #334155; display: flex; flex-direction: column; justify-content: center; align-items: center; position: sticky; top: 2rem; background-image: radial-gradient(circle at top right, #1e293b, transparent); }
+        /* Tiered Sidebar Banners */
+        .premium-banner-sidebar { background: #0f172a; border-radius: 12px; padding: 2rem; text-align: center; color: white; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3); border: 1px solid #334155; display: flex; flex-direction: column; justify-content: center; align-items: center; background-image: radial-gradient(circle at top right, #1e293b, transparent); margin-bottom: 2rem; }
+        .premium-banner-sidebar.sticky { position: sticky; top: 2rem; }
         .premium-banner-sidebar .badge { background-color: #ef4444; color: white; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.8rem; font-weight: bold; text-transform: uppercase; margin-bottom: 1rem; }
-        .premium-banner-sidebar h3 { font-size: 2.2rem; font-weight: 900; margin-bottom: 1rem; line-height: 1.1; color: white; }
-        .premium-banner-sidebar p { color: #94a3b8; font-size: 1rem; margin-bottom: 2rem; }
-        .premium-banner-sidebar .price { font-size: 2.5rem; font-weight: 900; color: #10b981; margin-bottom: 1.5rem; }
+        .premium-banner-sidebar h3 { font-size: 2rem; font-weight: 900; margin-bottom: 1rem; line-height: 1.1; color: white; }
+        .premium-banner-sidebar p { color: #94a3b8; font-size: 0.95rem; margin-bottom: 1.5rem; }
+        .premium-banner-sidebar .price { font-size: 2.2rem; font-weight: 900; color: #10b981; margin-bottom: 1.5rem; }
         .premium-banner-sidebar .banner-btn { background-color: #10b981; color: white; padding: 1rem 1.5rem; border-radius: 50px; font-weight: bold; font-size: 1rem; text-decoration: none; text-transform: uppercase; letter-spacing: 1px; transition: transform 0.2s; width: 100%; }
         .premium-banner-sidebar .banner-btn:hover { background-color: #059669; transform: scale(1.05); }
+        .premium-banner-sidebar .secondary-btn { background-color: transparent; border: 2px solid #3b82f6; margin-top: 1rem; }
+        .premium-banner-sidebar .secondary-btn:hover { background-color: rgba(59, 130, 246, 0.1); }
         
         footer { background-color: var(--primary); color: white; text-align: center; padding: 3rem 2rem; margin-top: 4rem; }
     </style>
@@ -78,12 +81,21 @@
 
         <aside class="sidebar">
             <div class="premium-banner-sidebar">
-                <div class="badge">Limited Availability</div>
+                <div class="badge">Most Popular</div>
                 <h3>The Solo AI Agent</h3>
                 <p>Hire a custom-built, fully autonomous OpenClaw AI worker to run your real estate workflow 24/7.</p>
                 <div class="price">00</div>
                 <a href="https://whop.com/realtld/openclaw-solo-agent-500" class="banner-btn" target="_blank" rel="noopener noreferrer">Deploy Your Agent</a>
                 <p style="font-size: 0.8rem; margin-top: 1rem; color: #475569;">Includes 1hr integration consulting.</p>
+            </div>
+
+            <div class="premium-banner-sidebar sticky">
+                <div class="badge" style="background-color: #3b82f6;">Enterprise</div>
+                <h3>The AI Strike Team</h3>
+                <p>A custom-built, 5-agent or 10-agent OpenClaw Swarm designed for massive scale.</p>
+                <div class="price">,500+</div>
+                <a href="mailto:4clickpro@gmail.com?subject=Inquiry: OpenClaw Enterprise Swarm" class="banner-btn secondary-btn">Contact Sales</a>
+                <p style="font-size: 0.8rem; margin-top: 1rem; color: #475569;">For brokerages and high-volume teams.</p>
             </div>
         </aside>
     </div>
